@@ -1,0 +1,28 @@
+Package: ws-unp
+Version: 0.1.0-1
+Architecture: amd64
+Maintainer: Andrés Soto <andres.soto@example.com>
+Installed-Size: 5361
+Depends: libc6 (>= 2.39), libgcc-s1 (>= 4.2), adduser, postgresql-client, openssl
+Recommends: postgresql
+Filename: ./ws-unp-0.1.0.deb
+Size: 1799528
+MD5sum: fa53ed9c15d2541969eb5c1cffbfb4d7
+SHA1: ab78e37c121a38aa3f41b4e138fc7431a48c113f
+SHA256: 983e116ed92487997598cf8ad4c59edc65c6e26ffa5bb5bb8bae00d953530561
+Section: net
+Priority: optional
+Homepage: https://launchpad.net/ws-unp
+Description: WebSocket server in Rust for real-time messaging
+ This project implements a WebSocket server in Rust for
+ real-time messaging, notifications, and mailbox management.
+ It is designed as a service for the Document Management
+ System of the National Protection Unit (UNP).
+ .
+ Runtime dependencies:
+  - adduser: creates the ws-unp system user on install.
+  - postgresql-client: needed to apply the bundled SQL schema
+    (db/ws.sql) with psql when using --migrate.
+  - openssl: CLI tool for generating and inspecting TLS
+    certificates used in WSS mode.
+
