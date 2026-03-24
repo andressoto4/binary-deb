@@ -19,7 +19,7 @@ cp $REPO/ws-unp-0.1.0.deb $DIST/
 # 3. Generar Packages y Packages.gz
 cd $DIST
 dpkg-scanpackages . /dev/null > Packages
-gzip -9c Packages > Packages.gz
+gzip -9n -c Packages > Packages.gz   # -n: sin mtime en la cabecera (reproducible)
 
 # 4. Generar Release con campos de metadatos obligatorios
 cd $REPO/dists/stable
