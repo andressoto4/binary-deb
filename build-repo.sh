@@ -16,10 +16,10 @@ mkdir -p $DIST
 # 2. Copiar el .deb al lugar correcto
 cp $REPO/ws-unp-0.1.0.deb $DIST/
 
-# 3. Generar Packages y Packages.gz
-cd $DIST
-dpkg-scanpackages . /dev/null > Packages
-gzip -9n -c Packages > Packages.gz   # -n: sin mtime en la cabecera (reproducible)
+# 3. Generar Packages y Packages.gz (desde raíz del repo para que Filename sea relativo a la base URL)
+cd $REPO
+dpkg-scanpackages dists/stable/main/binary-amd64/ /dev/null > $DIST/Packages 2>/dev/null
+gzip -9n -c $DIST/Packages > $DIST/Packages.gz   # -n: sin mtime en la cabecera (reproducible)
 
 # 4. Generar Release con campos de metadatos obligatorios
 cd $REPO/dists/stable

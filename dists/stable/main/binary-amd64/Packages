@@ -5,7 +5,7 @@ Maintainer: Andrés Soto <andres.soto@example.com>
 Installed-Size: 5361
 Depends: libc6 (>= 2.39), libgcc-s1 (>= 4.2), adduser, postgresql-client, openssl
 Recommends: postgresql
-Filename: ./ws-unp-0.1.0.deb
+Filename: dists/stable/main/binary-amd64/ws-unp-0.1.0.deb
 Size: 1799528
 MD5sum: fa53ed9c15d2541969eb5c1cffbfb4d7
 SHA1: ab78e37c121a38aa3f41b4e138fc7431a48c113f
